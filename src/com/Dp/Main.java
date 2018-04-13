@@ -13,10 +13,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Main extends Application{
-    Stage window;
-    Simulator sim ;
-    TextField durationText;
-    CheckBox adaptiveCheck;
+    private Stage window;
+    private Simulator sim ;
+    private TextField durationText;
+    private CheckBox adaptiveCheck;
     public static void main(String[] args) {
 //	    Simulator sim = new Simulator();
 //	    sim.startSimulation(600, true);

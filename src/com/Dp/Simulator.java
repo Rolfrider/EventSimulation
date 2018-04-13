@@ -14,12 +14,16 @@ public class Simulator {
     private ArrayList<Float> bufferStats = new ArrayList<>();
     private ArrayList<Integer> speedStats = new ArrayList<>();
     private ArrayList<Integer> qualityStats = new ArrayList<>();
+
     private final String startLOAD = "startLOAD", speedCHANGE = "speedCHANGE", endLOAD = "endLOAD",
             FHD = "1080p", HD = "720p", SD = "480p";
+
     private final int vHighSpeed= 8, highSpeed = 6, midSpeed = 4, lowSpeed = 2 , vLowSpeed = 1,
             bufferMinSize = 30, bufferMaxSize = 60, speedChanges = 10;
     private  float lambda ;
+
     private PriorityQueue<Event> events = new PriorityQueue<>(speedChanges + 1,eventComparator);
+
     private static Comparator<Event> eventComparator = new Comparator<Event>() {
         @Override
         public int compare(Event o1, Event o2) {
